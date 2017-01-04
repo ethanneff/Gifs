@@ -9,7 +9,6 @@
 import UIKit
 
 class ChildTabBarController: UITabBarController {
-  
   let gifsController = GifsViewController()
   let gifsIcon = UITabBarItem(tabBarSystemItem: .featured, tag: 1)
   let videosController = VideosViewController()
@@ -24,10 +23,5 @@ class ChildTabBarController: UITabBarController {
     gifsController.tabBarItem = gifsIcon
     videosController.tabBarItem = videosIcon
     viewControllers = [gifsController, videosController]
-    
-  }
-  
-  override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-    
   }
 }
