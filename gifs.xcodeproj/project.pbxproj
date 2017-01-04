@@ -110,14 +110,10 @@
 		67EC76C61E1C737A007FB887 /* containers */ = {
 			isa = PBXGroup;
 			children = (
-				67EC76AE1E1C7355007FB887 /* ChildTabBarController.swift */,
-				67EC76B01E1C7355007FB887 /* GifsCollection.swift */,
-				67EC76B11E1C7355007FB887 /* GifsCollectionCell.swift */,
-				67EC76B21E1C7355007FB887 /* GifsModal.swift */,
-				67EC76B31E1C7355007FB887 /* ParentNavigationController.swift */,
-				67EC76B41E1C7355007FB887 /* ParentViewController.swift */,
-				67EC76B61E1C7355007FB887 /* VideosViewController.swift */,
-				67EC76B71E1C7355007FB887 /* VideosViewControllerCell.swift */,
+				67EC76CD1E1C9B2B007FB887 /* navigation */,
+				67EC76CE1E1C9B34007FB887 /* tabs */,
+				67EC76CC1E1C9A70007FB887 /* gifs */,
+				67EC76CB1E1C9A68007FB887 /* videos */,
 			);
 			name = containers;
 			sourceTree = "<group>";
@@ -128,6 +124,42 @@
 				67EC76C91E1C7406007FB887 /* NavigateToFirstViewController.swift */,
 			);
 			name = features;
+			sourceTree = "<group>";
+		};
+		67EC76CB1E1C9A68007FB887 /* videos */ = {
+			isa = PBXGroup;
+			children = (
+				67EC76B61E1C7355007FB887 /* VideosViewController.swift */,
+				67EC76B71E1C7355007FB887 /* VideosViewControllerCell.swift */,
+			);
+			name = videos;
+			sourceTree = "<group>";
+		};
+		67EC76CC1E1C9A70007FB887 /* gifs */ = {
+			isa = PBXGroup;
+			children = (
+				67EC76B01E1C7355007FB887 /* GifsCollection.swift */,
+				67EC76B11E1C7355007FB887 /* GifsCollectionCell.swift */,
+				67EC76B21E1C7355007FB887 /* GifsModal.swift */,
+			);
+			name = gifs;
+			sourceTree = "<group>";
+		};
+		67EC76CD1E1C9B2B007FB887 /* navigation */ = {
+			isa = PBXGroup;
+			children = (
+				67EC76B31E1C7355007FB887 /* ParentNavigationController.swift */,
+			);
+			name = navigation;
+			sourceTree = "<group>";
+		};
+		67EC76CE1E1C9B34007FB887 /* tabs */ = {
+			isa = PBXGroup;
+			children = (
+				67EC76AE1E1C7355007FB887 /* ChildTabBarController.swift */,
+				67EC76B41E1C7355007FB887 /* ParentViewController.swift */,
+			);
+			name = tabs;
 			sourceTree = "<group>";
 		};
 		AC0B4313B76B2295E4CBB750 /* Pods */ = {
