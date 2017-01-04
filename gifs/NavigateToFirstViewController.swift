@@ -9,10 +9,10 @@
 import UIKit
 
 extension AppDelegate {
-    func navigateToFirstController(viewController: UIViewController) {
-        window = UIWindow(frame: UIScreen.main.bounds)
-        guard let window = window else { return }
-        window.rootViewController = viewController
-        window.makeKeyAndVisible()
-    }
+  func navigateToFirstController(viewController: UIViewController) {
+    window = UIWindow(frame: UIScreen.main.bounds)
+    guard let window = window else { return }
+    window.rootViewController = viewController
+    window.makeKeyAndVisible()
+  }
 }

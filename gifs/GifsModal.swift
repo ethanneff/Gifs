@@ -11,7 +11,7 @@ import UIKit
 class GifsModal: UIViewController {
   // MARK: - properties
   var modalz: UIView!
-
+  
   var completion: completionBlock
   var tapToClose: UITapGestureRecognizer = UITapGestureRecognizer()
   let animationDuration: TimeInterval = 0.25
@@ -19,24 +19,24 @@ class GifsModal: UIViewController {
   let separatorHeight: CGFloat = 0.5
   let buttonConfirmTitle: String = "Okay"
   let buttonCancelTitle: String = "Cancel"
-
+  
   typealias completionBlock = ((_ output: [String: AnyObject]) -> ())?
-
+  
   // MARK: - init
   init() {
     super.init(nibName: nil, bundle: nil)
     modalz = createModal()
     setupModal()
   }
-
+  
   required init?(coder aDecoder: NSCoder) {
     fatalError("init coder not implemented")
   }
-
+  
   deinit {
-
+    
   }
-
+  
 }
 extension GifsModal {
   // MARK: - public
@@ -52,7 +52,7 @@ extension GifsModal {
       }
     }
   }
-
+  
   func hide(_ completion: (() -> ())? = nil) {
     self.animateOut() {
       self.dismiss(animated: false, completion: {
@@ -62,9 +62,9 @@ extension GifsModal {
         self.completion = nil
       })
     }
-
+    
   }
-
+  
   // MARK: - gestures
   internal func tapToClosePressed(_ gesture: UITapGestureRecognizer) {
     // click backdrop
@@ -88,7 +88,7 @@ extension GifsModal {
       completion()
     }
   }
-
+  
   fileprivate func animateIn(_ completion: (() -> ())? = nil) {
     modalz.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
     modalz.alpha = 0
@@ -117,10 +117,10 @@ extension GifsModal {
     view.alpha = 0
     view.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.2)
     view.addSubview(modalz)
-
+    
     return modalz
   }
-
+  
   fileprivate func setupModal() {
     NSLayoutConstraint.activate([
       NSLayoutConstraint(item: modalz, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0),
@@ -128,6 +128,6 @@ extension GifsModal {
       NSLayoutConstraint(item: modalz, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 0.7, constant: 0),
       NSLayoutConstraint(item: modalz, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 0.7, constant: 0),
       ])
-
+    
   }
 }

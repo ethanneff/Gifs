@@ -9,10 +9,10 @@
 import UIKit
 
 class ParentNavigationController: UINavigationController {
-    let main = GifsViewController()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        pushViewController(main, animated: true)
-    }
+  let main = GifsViewController()
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    pushViewController(main, animated: true)
+  }
 }

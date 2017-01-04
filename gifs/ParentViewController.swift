@@ -9,17 +9,17 @@
 import UIKit
 
 class ParentViewController: UIViewController {
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    view.backgroundColor = .white
+    title = "parent"
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        title = "parent"
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(right))
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-    }
-    
-    fileprivate dynamic func right() {
-        navigationController?.pushViewController(GifsViewController(), animated: true)
-    }
+    navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(right))
+    navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+  }
+  
+  fileprivate dynamic func right() {
+    navigationController?.pushViewController(GifsViewController(), animated: true)
+  }
 }

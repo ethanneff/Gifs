@@ -9,5 +9,5 @@
 import UIKit
 
 class VideosViewControllerCell: UITableViewCell {
-    static let identifier: String = "cell"
+  static let identifier: String = "cell"
 }
